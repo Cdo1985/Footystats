@@ -353,7 +353,7 @@
                     id: Date.now(),
                     name: name,
                     year: currentYear,
-                    stats: { G: 0, B: 0, M: 0, T: 0, A: 0 }
+                    stats: { G: 0, B: 0, M: 0, T: 0, K: 0, H: 0, A: 0 }
                 });
                 saveData();
                 nameInput.value = '';
@@ -383,7 +383,7 @@
             if (kids.length === 0) {
                 contentDiv.innerHTML = `
                     <div class="empty-state">
-                        <div class="empty-icon">📊</div>
+                        <div class="empty-icon">✍️🏉🥇💾</div>
                         <p class="empty-text">No players yet</p>
                         <p class="empty-subtext">Tap the + button to add a player</p>
                     </div>
@@ -404,7 +404,7 @@
                             <div class="stat-input-grid">
                 `;
 
-                ['G', 'B', 'M', 'T', 'A'].forEach(stat => {
+                ['G', 'B', 'M', 'T', 'K', 'H', 'A'].forEach(stat => {
                     const label = statLabels[stat];
                     html += `
                         <div class="stat-column">
@@ -429,7 +429,7 @@
                                 <div class="totals-grid">
                 `;
 
-                ['G', 'B', 'M', 'T', 'A'].forEach(stat => {
+                ['G', 'B', 'M', 'T', 'K', 'H', 'A'].forEach(stat => {
                     const label = statLabels[stat];
                     html += `
                         <div class="total-box" style="background-color: ${label.color}15; color: ${label.color};">
