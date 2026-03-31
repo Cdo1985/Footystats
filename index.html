@@ -272,7 +272,45 @@
             font-weight: 900;
             font-size: 18px;
             text-align: center;
+        
         }
+        /* Responsive stat grid for ALL devices */
+.stat-input-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.totals-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .stat-input-grid,
+    .totals-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .stat-input-grid,
+    .totals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Extra small/mobile portrait */
+@media (max-width: 420px) {
+    .stat-input-grid,
+    .totals-grid {
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 <body>
